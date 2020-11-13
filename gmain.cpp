@@ -1,5 +1,4 @@
 #include"libOne.h"
-#include"title.h"
 class NEZU {
     VECTOR3 P[6];
     float Len = 100;
@@ -171,14 +170,13 @@ void background() {
 
 void gmain() {
     ShowCursor(FALSE);
-    window(1920,1080, full);
+    window(300, 900, full);
     class NEZU nezu;
     nezu.createTile();
     while (notQuit) {
         nezu.moveTile();
         background();
         nezu.draw();
-        title();
     }
     ShowCursor(TRUE);
 }
